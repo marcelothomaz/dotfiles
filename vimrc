@@ -10,9 +10,18 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'jelera/vim-javascript-syntax'
-Plug 'pangloss/vim-javascript'
+Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx']  }
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'valloric/youcompleteme'
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'goatslacker/mango.vim'
+Plug 'crusoexia/vim-monokai'
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'othree/yajs.vim'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'othree/html5.vim'
+Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx']  }
+Plug 'neoclide/vim-jsx-improve'
 call plug#end()
 
 set autoindent
@@ -24,8 +33,20 @@ set si
 set encoding=utf8
 set guifont=Source\ Code\ Pro\ NF\ Medium\ 14
 
-" Use vim-code-dark
-colorscheme codedark
+" avoid repeating comments on new line
+set formatoptions-=cro
+
+" colorscheme
+set background=dark
+" Old colorscheme codedark
+colorscheme minimalist
+" for vim 7
+set t_Co=256
+
+" for vim 8
+if (has("termguicolors"))
+   set termguicolors
+endif
 
 " --------------------------------------------------
 " configure vim-airline
@@ -64,3 +85,8 @@ let g:syntastic_javascript_checkers=['eslint']
 " just on save.
 " You might not want this, so just leave it out if you don't.
 let g:syntastic_check_on_open=1
+
+" vim-javascript
+let g:javascript_plugin_ngdoc=1
+
+" -----------------------------------------------
