@@ -32,6 +32,7 @@ set ai
 set si
 set encoding=utf8
 set guifont=Source\ Code\ Pro\ NF\ Medium\ 14
+set hlsearch
 
 " avoid repeating comments on new line
 set formatoptions-=cro
