@@ -22,6 +22,9 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'othree/html5.vim'
 Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx']  }
 Plug 'neoclide/vim-jsx-improve'
+Plug 'farmergreg/vim-lastplace'
+Plug 'qpkorr/vim-bufkill'
+Plug 'ahayman/vim-nodejs-complete'
 call plug#end()
 
 set autoindent
@@ -33,6 +36,12 @@ set si
 set encoding=utf8
 set guifont=Source\ Code\ Pro\ NF\ Medium\ 14
 set hlsearch
+
+" window navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " avoid repeating comments on new line
 set formatoptions-=cro
