@@ -24,7 +24,6 @@ Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx']  }
 Plug 'neoclide/vim-jsx-improve'
 Plug 'farmergreg/vim-lastplace'
 Plug 'qpkorr/vim-bufkill'
-Plug 'ahayman/vim-nodejs-complete'
 call plug#end()
 
 set autoindent
@@ -99,4 +98,6 @@ let g:syntastic_check_on_open=1
 " vim-javascript
 let g:javascript_plugin_ngdoc=1
 
+" vim-jsx
+let g:jsx_ext_required = 1
 " -----------------------------------------------
