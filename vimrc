@@ -1,6 +1,5 @@
 call plug#begin()
 Plug 'scrooloose/nerdtree'
-Plug 'tomasiser/vim-code-dark'
 Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/syntastic'
 Plug 'jiangmiao/auto-pairs'
@@ -9,21 +8,30 @@ Plug 'tpope/vim-surround'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'jelera/vim-javascript-syntax'
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx']  }
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'valloric/youcompleteme'
-Plug 'rafi/awesome-vim-colorschemes'
-Plug 'goatslacker/mango.vim'
-Plug 'crusoexia/vim-monokai'
-Plug 'othree/javascript-libraries-syntax.vim'
+" Plug 'rafi/awesome-vim-colorschemes'
+Plug 'dikiaap/minimalist'
+" Plug 'goatslacker/mango.vim'
 Plug 'othree/yajs.vim'
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'othree/html5.vim'
+" Plug 'HerringtonDarkholme/yats.vim'
+Plug 'jelera/vim-javascript-syntax'
 Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx']  }
-Plug 'neoclide/vim-jsx-improve'
+Plug 'neoclide/vim-jsx-improve', { 'for': ['javascript', 'javascript.jsx']  }
+Plug 'othree/html5.vim'
+Plug 'othree/javascript-libraries-syntax.vim'
+" Plug 'crusoexia/vim-monokai'
+
+Plug 'vim-scripts/svg.vim'
+
+" Plug 'sheerun/vim-polyglot'
+Plug 'alampros/vim-styled-jsx'
+Plug 'hail2u/vim-css3-syntax'
+
 Plug 'farmergreg/vim-lastplace'
 Plug 'qpkorr/vim-bufkill'
+
 call plug#end()
 
 set autoindent
@@ -41,7 +49,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-
+nnoremap <C-i> :IndentGuidesToggle<CR>
 " avoid repeating comments on new line
 set formatoptions-=cro
 
@@ -101,3 +109,10 @@ let g:javascript_plugin_ngdoc=1
 " vim-jsx
 let g:jsx_ext_required = 1
 " -----------------------------------------------
+
+" auto detect filetypes
+filetype plugin indent on
+
+
+"activate jsdoc syntax from vim-javascript
+let g:javascript_plugin_jsdoc = 1
