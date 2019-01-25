@@ -31,6 +31,9 @@ Plug 'hail2u/vim-css3-syntax'
 
 Plug 'farmergreg/vim-lastplace'
 Plug 'qpkorr/vim-bufkill'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'npm install',
+  \ 'for': ['javascript', 'css', 'less', 'scss', 'json', 'markdown', 'yaml', 'html', ] }
 
 call plug#end()
 
@@ -64,6 +67,16 @@ set t_Co=256
 if (has("termguicolors"))
    set termguicolors
 endif
+
+" configure prettier
+let g:prettier#exec_cmd_path = "/home/marcelo/.n/bin/prettier"
+let g:prettier#config#tab_width = 3
+let g:prettier#config#parser = "babylon"
+let g:prettier#autoformat = 0
+let g:prettier#config#semi = 'false'
+let g:prettier#config#single_quote = 'true'
+let g:prettier#config#bracket_spacing = 'true'
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
 " --------------------------------------------------
 " configure vim-airline
