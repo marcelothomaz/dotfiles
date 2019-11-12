@@ -1,7 +1,7 @@
 # custom
 eval `dircolors ~/.dotfiles/dircolors.256dark`
 #source ~/.bash-powerline.sh
-source ~/.bashstyler.sh
+source ~/.dotfiles/.bashstyler.sh
 
 
 alias svim='sudo vim'
